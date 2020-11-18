@@ -74,7 +74,7 @@ if(NOT ${SKIP_GLSLANG_INSTALL})
 endif()
 option(ENABLE_SPVREMAPPER "Enables building of SPVRemapper" ON)
 
-option(ENABLE_GLSLANG_BINARIES "Builds glslangValidator and spirv-remap" ON)
+option(ENABLE_GLSLANG_BINARIES "Builds glslangValidator and spirv-remap" OFF)
 
 option(ENABLE_GLSLANG_JS
     "If using Emscripten, build glslang.js. Otherwise, builds a sample executable for binary-size testing." OFF)
@@ -100,7 +100,7 @@ CMAKE_DEPENDENT_OPTION(ENABLE_HLSL
     ON "NOT ENABLE_GLSLANG_WEBMIN"
     OFF)
 
-option(ENABLE_RTTI "Enables RTTI" OFF)
+option(ENABLE_RTTI "Enables RTTI" ON)
 option(ENABLE_EXCEPTIONS "Enables Exceptions" OFF)
 option(ENABLE_OPT "Enables spirv-opt capability if present" ON)
 option(ENABLE_PCH "Enables Precompiled header" ON)
